@@ -20,7 +20,104 @@
 }
 
 body {
-  background: var(--background);
+  background: #e0e0e0;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Neumorphic UI styles - Optimized */
+.neumorph {
+  background: #e0e0e0;
+  border-radius: 20px;
+  box-shadow:
+    8px 8px 16px #bebebe,
+    -8px -8px 16px #ffffff;
+  will-change: transform;
+}
+
+.neumorph-btn {
+  border: none;
+  border-radius: 12px;
+  box-shadow:
+    4px 4px 8px #bebebe,
+    -4px -4px 8px #ffffff;
+  padding: 0.75em 2em;
+  font-weight: 500;
+  transition: box-shadow 0.15s ease-out, transform 0.15s ease-out;
+  outline: none;
+  will-change: transform, box-shadow;
+}
+
+.neumorph-btn:active {
+  box-shadow:
+    inset 2px 2px 6px #bebebe,
+    inset -2px -2px 6px #ffffff;
+  transform: translateY(2px);
+}
+
+.neumorph-btn:hover {
+  filter: brightness(0.97);
+  box-shadow:
+    2px 2px 6px #bebebe,
+    -2px -2px 6px #ffffff;
+}
+
+.neumorph-input {
+  background: #e0e0e0;
+  border: none;
+  border-radius: 10px;
+  box-shadow:
+    inset 2px 2px 6px #bebebe,
+    inset -2px -2px 6px #ffffff;
+  padding: 0.5em 1em;
+}
+
+/* Neuromorphic styles from Design Spec - Optimized */
+@layer components {
+  .btn-thermal {
+    @apply transition-all duration-200 ease-out;
+    background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+    will-change: transform, background, box-shadow;
+  }
+  .btn-thermal:hover {
+    background: linear-gradient(135deg, #ec4899 0%, #f97316 100%);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.6);
+  }
+  .card-spike {
+    @apply transition-all duration-200 ease-out;
+    will-change: transform, box-shadow;
+  }
+  .card-spike:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+  }
+  
+  /* Article card styles - matching the design */
+  .article-card {
+    @apply bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+  .article-card:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* Gradient backgrounds for different categories */
+  .gradient-treatment {
+    background: linear-gradient(135deg, #fde68a 0%, #fed7aa 50%, #fce7f3 100%);
+  }
+  .gradient-laser {
+    background: linear-gradient(135deg, #fce7f3 0%, #ddd6fe 50%, #fed7aa 100%);
+  }
+  .gradient-facial {
+    background: linear-gradient(135deg, #fef3c7 0%, #fef08a 50%, #fed7aa 100%);
+  }
+  
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
 }

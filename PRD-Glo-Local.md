@@ -4,7 +4,7 @@ The GLO Alchemist Skin & Laser Lab requires a programmatically-generated, local 
 
 Business Context  
 Business Name: The GLO Alchemist  
-Industry: Medical Aesthetics / Skin & Laser Treatments  
+Industry: Skin care clinic
 Location: Littleton, Colorado  
 The Glo Alchemist Skin & Laser Lab   
 709 W Littleton Blvd Ste 105   
@@ -41,7 +41,6 @@ Technical Requirements:
 
 URL Structure: /\[service\]-littleton-co  
 30-40 individual service pages based on GBP services  
-AI-generated, locally-specific content (800-1000 words per page)  
 Standardized page template with local customization
 
 Service Categories:  

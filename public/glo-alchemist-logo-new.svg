@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Crescent moon logo -->
+  <g transform="translate(140, 20)">
+    <path d="M80 40 C80 18, 62 0, 40 0 C18 0, 0 18, 0 40 C0 62, 18 80, 40 80 C50 80, 59 76, 66 70 C58 74, 49 76, 40 76 C20 76, 4 60, 4 40 C4 20, 20 4, 40 4 C60 4, 76 20, 76 40 C76 50, 74 59, 70 66 C76 59, 80 50, 80 40 Z" fill="#2d2d2d"/>
+  </g>
+  
+  <!-- Text -->
+  <g transform="translate(0, 120)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="32" font-weight="300" letter-spacing="8" fill="#2d2d2d">THE GLO ALCHEMIST</text>
+  </g>
+</svg>
