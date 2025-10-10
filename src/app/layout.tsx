@@ -7,6 +7,7 @@ const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
+  weight: ['400', '500', '600', '700', '800', '900'],
   preload: true,
 });
 
@@ -47,7 +48,7 @@ export default function RootLayout({
             description: 'Professional skin care clinic offering advanced laser treatments, medical-grade facials, and aesthetic services in Littleton, Colorado.',
             address: {
               '@type': 'PostalAddress',
-              streetAddress: '709 W Littleton Blvd Ste 105',
+              streetAddress: '709 W Littleton Blvd Suite #105',
               addressLocality: 'Littleton',
               addressRegion: 'CO',
               postalCode: '80120',
@@ -62,11 +63,11 @@ export default function RootLayout({
             email: 'info@thegloalchemist.com',
             url: 'https://thegloalchemist.com',
             openingHours: [
-              'Tu 09:30-17:00',
-              'We 09:30-17:00', 
-              'Th 09:30-17:00',
-              'Fr 09:30-17:00',
-              'Sa 09:30-17:00'
+              'Tu 10:00-17:00',
+              'We 10:00-17:00', 
+              'Th 10:00-17:00',
+              'Fr 10:00-17:00',
+              'Sa 10:00-17:00'
             ],
             image: [
               'https://thegloalchemist.com/hero1.png',
@@ -224,7 +225,7 @@ export default function RootLayout({
           ]),
         }} />
       </head>
-      <body className="min-h-screen bg-gradient-to-br from-yellow-50 via-white to-yellow-100 font-sans font-bold text-brown-900">
+      <body className={`min-h-screen bg-gradient-to-br from-amber-50 via-yellow-50 to-amber-100 ${inter.className} font-bold text-amber-900`}>
         <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
           {children}
         </Suspense>

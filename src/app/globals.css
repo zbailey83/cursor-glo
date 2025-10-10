@@ -76,17 +76,18 @@ html {
   padding: 0.5em 1em;
 }
 
-/* Neuromorphic styles from Design Spec - Optimized */
+/* Updated thermal button styles to match warm color scheme */
 @layer components {
   .btn-thermal {
-    @apply transition-all duration-200 ease-out;
-    background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+    @apply transition-all duration-300 ease-out font-black;
+    background: linear-gradient(135deg, #92400e 0%, #b45309 100%);
     will-change: transform, background, box-shadow;
+    box-shadow: 0 4px 15px rgba(146, 64, 14, 0.3);
   }
   .btn-thermal:hover {
-    background: linear-gradient(135deg, #ec4899 0%, #f97316 100%);
+    background: linear-gradient(135deg, #78350f 0%, #92400e 100%);
     transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(236, 72, 153, 0.6);
+    box-shadow: 0 8px 25px rgba(120, 53, 15, 0.4);
   }
   .card-spike {
     @apply transition-all duration-200 ease-out;

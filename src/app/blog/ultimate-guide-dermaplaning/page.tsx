@@ -44,8 +44,12 @@ export default function DermaplaningGuidePage() {
             <span className="mx-2">•</span>
             <span>By The GLO Alchemist Team</span>
           </div>
-          <div className="h-64 bg-gradient-to-br from-yellow-100 to-pink-100 rounded-2xl flex items-center justify-center mb-8">
-            <span className="text-gray-500">Featured Article Image</span>
+          <div className="relative w-full h-64 md:h-96 rounded-3xl overflow-hidden shadow-xl mb-8">
+            <img
+              src="/blog-imgs/blog-nature-woman.jpg"
+              alt="Woman enjoying natural skincare treatment - representing the natural approach to dermaplaning"
+              className="w-full h-full object-cover"
+            />
           </div>
         </header>
 

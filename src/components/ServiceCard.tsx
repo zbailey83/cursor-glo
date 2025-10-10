@@ -44,19 +44,27 @@ const getCardStyling = (name: string, category?: string) => {
   };
 };
 
-const ServiceCard = ({ name, description, bullets, href, category }: ServiceCardProps) => {
+const ServiceCard = ({ name, description, bullets, href, category, imgSrc }: ServiceCardProps) => {
   const styling = getCardStyling(name, category);
   
   return (
     <div className="group hover:scale-[1.02] transition-all duration-300 cursor-pointer">
       <Link href={href} className="block">
         <article className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-          {/* Header with gradient background and icon */}
-          <div className={`h-32 bg-gradient-to-br ${styling.gradient} flex items-center justify-center relative`}>
-            <div className="text-center">
-              <div className="text-4xl mb-2">{styling.icon}</div>
-              <span className="text-gray-600 font-medium text-sm">{name}</span>
-            </div>
+          {/* Header with service image or gradient background */}
+          <div className={`h-32 ${imgSrc ? 'bg-gray-100' : `bg-gradient-to-br ${styling.gradient}`} flex items-center justify-center relative overflow-hidden`}>
+            {imgSrc ? (
+              <img 
+                src={imgSrc} 
+                alt={name}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <div className="text-center">
+                <div className="text-4xl mb-2">{styling.icon}</div>
+                <span className="text-gray-600 font-medium text-sm">{name}</span>
+              </div>
+            )}
           </div>
           
           {/* Content */}
