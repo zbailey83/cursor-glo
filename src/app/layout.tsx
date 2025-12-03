@@ -1,26 +1,9 @@
-import './globals.css';
-import type { Metadata } from 'next';
-import { Inter } from "next/font/google";
-import { Suspense } from 'react';
-
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-  weight: ['400', '500', '600', '700', '800', '900'],
-  preload: true,
-});
-
-export const metadata: Metadata = {
-  title: 'Skin Care Clinic in Littleton | The GLO Alchemist Skin & Laser Lab',
+title: 'Skin Care Clinic in Littleton | The GLO Alchemist Skin & Laser Lab',
   description: 'Transform your skin with advanced laser treatments, professional facials, and medical-grade aesthetics at The GLO Alchemist in Littleton, CO. Licensed professionals, personalized treatment plans.',
-  openGraph: {
-    title: 'Skin Care Clinic in Littleton | The GLO Alchemist Skin & Laser Lab',
-    description: 'Transform your skin with advanced laser treatments, professional facials, and medical-grade aesthetics at The GLO Alchemist in Littleton, CO. Licensed professionals, personalized treatment plans.',
     url: 'https://thegloalchemist.com',
-    siteName: 'The GLO Alchemist',
-    locale: 'en_US',
-    type: 'website',
+      siteName: 'The GLO Alchemist',
+        locale: 'en_US',
+          type: 'website',
   },
 };
 
@@ -36,7 +19,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://thegloalchemist.myaestheticrecord.com" />
-        
+
         {/* SkinCareClinic Schema.org JSON-LD */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -64,7 +47,7 @@ export default function RootLayout({
             url: 'https://thegloalchemist.com',
             openingHours: [
               'Tu 10:00-17:00',
-              'We 10:00-17:00', 
+              'We 10:00-17:00',
               'Th 10:00-17:00',
               'Fr 10:00-17:00',
               'Sa 10:00-17:00'
@@ -84,13 +67,13 @@ export default function RootLayout({
                 sameAs: 'https://en.wikipedia.org/wiki/Littleton,_Colorado'
               },
               {
-                '@type': 'City', 
+                '@type': 'City',
                 name: 'Englewood',
                 sameAs: 'https://en.wikipedia.org/wiki/Englewood,_Colorado'
               },
               {
                 '@type': 'City',
-                name: 'Denver', 
+                name: 'Denver',
                 sameAs: 'https://en.wikipedia.org/wiki/Denver'
               },
               {
@@ -112,7 +95,7 @@ export default function RootLayout({
                   }
                 },
                 {
-                  '@type': 'Offer', 
+                  '@type': 'Offer',
                   itemOffered: {
                     '@type': 'Service',
                     name: 'Chemical Peels',
@@ -122,7 +105,7 @@ export default function RootLayout({
                 {
                   '@type': 'Offer',
                   itemOffered: {
-                    '@type': 'Service', 
+                    '@type': 'Service',
                     name: 'Microneedling',
                     description: 'Advanced microneedling treatments for skin texture improvement'
                   }
@@ -158,7 +141,7 @@ export default function RootLayout({
             }
           }),
         }} />
-        
+
         {/* Featured Reviews Schema.org JSON-LD */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify([
@@ -184,7 +167,7 @@ export default function RootLayout({
             },
             {
               '@context': 'https://schema.org',
-              '@type': 'Review', 
+              '@type': 'Review',
               itemReviewed: {
                 '@type': 'SkinCareClinic',
                 name: 'The GLO Alchemist',
@@ -206,7 +189,7 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'Review',
               itemReviewed: {
-                '@type': 'SkinCareClinic', 
+                '@type': 'SkinCareClinic',
                 name: 'The GLO Alchemist',
                 '@id': 'https://thegloalchemist.com/#organization'
               },

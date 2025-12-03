@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "name": "Lumina Design System",
+    "version": "1.0.0",
+    "description": "A futuristic, cyberpunk-inspired design system characterized by deep indigo backgrounds, fluid ethereal gradients, glassmorphism, and kinetic Syncopate typography.",
+    "author": "Lumina Team"
+  },
+  "tokens": {
+    "colors": {
+      "palette": {
+        "deepIndigo": "#31326f",
+        "night": "#1a1b3b",
+        "void": "#1f2048",
+        "teal": "#4fb7b3",
+        "mint": "#a8fbd3",
+        "periwinkle": "#637ab9",
+        "white": "#ffffff",
+        "black": "#000000"
+      },
+      "theme": {
+        "background": {
+          "default": "#31326f",
+          "dark": "#1a1b3b",
+          "gradient": "linear-gradient(to bottom right, #31326f, #28295c, #1f2048)"
+        },
+        "text": {
+          "primary": "#ffffff",
+          "secondary": "rgba(255, 255, 255, 0.7)",
+          "accent": "#a8fbd3",
+          "brand": "#4fb7b3"
+        },
+        "border": {
+          "subtle": "rgba(255, 255, 255, 0.1)",
+          "strong": "rgba(255, 255, 255, 0.2)"
+        },
+        "selection": {
+          "background": "#4fb7b3",
+          "text": "#000000"
+        }
+      }
+    },
+    "typography": {
+      "fontFamily": {
+        "heading": "'Syncopate', sans-serif",
+        "body": "'Space Grotesk', sans-serif",
+        "mono": "monospace"
+      },
+      "weights": {
+        "light": 300,
+        "regular": 400,
+        "bold": 700,
+        "black": 900
+      },
+      "size": {
+        "display": "clamp(3rem, 14vw, 12rem)",
+        "h1": "clamp(2.5rem, 8vw, 6rem)",
+        "h2": "clamp(2rem, 5vw, 4rem)",
+        "h3": "1.5rem",
+        "body": "1rem",
+        "small": "0.875rem"
+      }
+    },
+    "spacing": {
+      "sectionPadding": "clamp(5rem, 10vh, 8rem)",
+      "containerPadding": "1.5rem",
+      "elementGap": "1.5rem"
+    },
+    "borderRadius": {
+      "none": "0",
+      "sm": "0.25rem",
+      "md": "0.5rem",
+      "lg": "1rem",
+      "xl": "1.5rem",
+      "full": "9999px"
+    }
+  },
+  "effects": {
+    "glassmorphism": {
+      "default": {
+        "background": "rgba(255, 255, 255, 0.05)",
+        "backdropFilter": "blur(10px)",
+        "border": "1px solid rgba(255, 255, 255, 0.1)"
+      },
+      "strong": {
+        "background": "rgba(0, 0, 0, 0.8)",
+        "backdropFilter": "blur(20px)",
+        "border": "1px solid rgba(255, 255, 255, 0.1)"
+      }
+    },
+    "gradients": {
+      "text": "linear-gradient(to right, #ffffff, #a8fbd3, #4fb7b3, #637ab9, #ffffff)",
+      "overlay": "linear-gradient(to top, #1a1b3b, transparent)"
+    },
+    "filters": {
+      "fluidBlob": "blur(40px) mix-blend-screen",
+      "noise": "url('https://grainy-gradients.vercel.app/noise.svg') opacity-10 mix-blend-overlay"
+    }
+  },
+  "components": {
+    "Button": {
+      "variants": {
+        "primary": {
+          "border": "1px solid white",
+          "background": "transparent",
+          "color": "white",
+          "textTransform": "uppercase",
+          "letterSpacing": "0.1em",
+          "fontWeight": "700",
+          "padding": "0.75rem 2rem",
+          "hover": {
+            "background": "white",
+            "color": "black"
+          }
+        },
+        "link": {
+          "background": "transparent",
+          "color": "white",
+          "textTransform": "uppercase",
+          "letterSpacing": "0.1em",
+          "fontWeight": "700",
+          "hover": {
+            "color": "#a8fbd3"
+          }
+        }
+      }
+    },
+    "Card": {
+      "ArtistCard": {
+        "interaction": "Scale image on hover, slide in details",
+        "typography": "Heading font for title, mono for tags",
+        "overlay": "Gradient from bottom"
+      },
+      "PricingCard": {
+        "background": "Glassmorphism default",
+        "border": "1px solid rgba(255,255,255,0.1)",
+        "hover": "Translate Y -20px"
+      }
+    },
+    "Navigation": {
+      "style": "Fixed top, mix-blend-difference",
+      "content": "Logo (Syncopate), Links (Uppercase, Spaced)"
+    },
+    "Cursor": {
+      "type": "Custom",
+      "behavior": "Follows mouse with spring delay",
+      "style": "White ring, expands to solid circle on hover with 'VIEW' text"
+    }
+  },
+  "animations": {
+    "transitions": {
+      "default": "all 0.3s ease",
+      "slow": "all 0.6s ease-out",
+      "spring": "type: spring, stiffness: 300, damping: 25"
+    },
+    "keyframes": {
+      "pulse": "scale 0.8 -> 1.2 -> 0.8",
+      "marquee": "translateX 0 -> -50%",
+      "float": "translate X/Y in random patterns"
+    },
+    "scroll": {
+      "parallax": "Transform Y based on scrollYProgress",
+      "fade": "Opacity based on scrollYProgress"
+    }
+  },
+  "resources": {
+    "fonts": [
+      "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syncopate:wght@400;700&display=swap"
+    ],
+    "icons": "Lucide React"
+  }
+}
