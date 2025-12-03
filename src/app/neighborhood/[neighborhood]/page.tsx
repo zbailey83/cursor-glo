@@ -90,56 +90,61 @@ export default async function NeighborhoodServicesPage({ params }: { params: Pro
   const content = neighborhoodContent[neighborhood];
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-amber-50 to-yellow-50 font-inter">
+    <div className="min-h-screen flex flex-col bg-lumina-bg font-body text-lumina-text">
       <Header />
-      <main className="flex-1 max-w-6xl mx-auto py-16 px-4">
-        {/* Hero Section with Neighborhood-Specific Content */}
-        <div className="text-center mb-16 bg-gradient-to-br from-amber-100 to-yellow-100 rounded-3xl p-12 shadow-lg">
-          <h1 className="text-4xl md:text-5xl font-black mb-8 text-amber-900 leading-tight">
-            {content ? content.h1 : `All Services in ${prettyName}, CO`}
-          </h1>
-          <div className="max-w-4xl mx-auto">
-            <p className="text-xl text-amber-800 leading-relaxed mb-10 font-medium">
-              {content ? content.description : `Explore our advanced treatments available in ${prettyName}. Click any card to view details for this neighborhood.`}
-            </p>
-          </div>
+      <main className="flex-1 max-w-7xl mx-auto py-20 px-4 relative">
+        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-overlay pointer-events-none"></div>
 
-          {/* Call to Action Buttons */}
-          <div className="flex flex-col sm:flex-row justify-center gap-6 mb-8">
-            <a
-              href="https://thegloalchemist.myaestheticrecord.com/online-booking"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-10 py-4 bg-amber-800 text-amber-50 font-black text-lg rounded-full hover:bg-amber-900 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-            >
-              Book Your Consultation
-            </a>
-            <a
-              href="tel:3035063582"
-              className="inline-flex items-center justify-center px-10 py-4 bg-yellow-700 text-yellow-50 font-black text-lg rounded-full hover:bg-yellow-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-            >
-              <svg className="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
-              </svg>
-              Call (303) 506-3582
-            </a>
+        {/* Hero Section with Neighborhood-Specific Content */}
+        <div className="text-center mb-16 relative z-10">
+          <div className="glass rounded-3xl p-12 shadow-xl border border-lumina-primary/20">
+            <h1 className="text-4xl md:text-5xl font-heading font-bold mb-8 text-lumina-text leading-tight">
+              {content ? content.h1 : `All Services in ${prettyName}, CO`}
+            </h1>
+            <div className="max-w-4xl mx-auto">
+              <p className="text-xl text-lumina-text/80 leading-relaxed mb-10 font-medium">
+                {content ? content.description : `Explore our advanced treatments available in ${prettyName}. Click any card to view details for this neighborhood.`}
+              </p>
+            </div>
+
+            {/* Call to Action Buttons */}
+            <div className="flex flex-col sm:flex-row justify-center gap-6 mb-8">
+              <a
+                href="https://thegloalchemist.myaestheticrecord.com/online-booking"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-10 py-4 bg-lumina-primary text-lumina-bg font-heading font-bold text-lg rounded-full hover:bg-lumina-text hover:text-lumina-bg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 border border-lumina-primary"
+              >
+                Book Your Consultation
+              </a>
+              <a
+                href="tel:3035063582"
+                className="inline-flex items-center justify-center px-10 py-4 bg-transparent text-lumina-text font-heading font-bold text-lg rounded-full hover:bg-lumina-primary hover:text-lumina-bg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 border-2 border-lumina-text hover:border-lumina-primary"
+              >
+                <svg className="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                </svg>
+                Call (303) 506-3582
+              </a>
+            </div>
           </div>
         </div>
+
         {/* Services by Category */}
-        <div className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-black text-center mb-6 text-amber-900">
+        <div className="mb-16 relative z-10">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-center mb-6 text-lumina-text">
             Professional Services for {prettyName} Residents
           </h2>
-          <p className="text-center text-amber-800 mb-12 max-w-4xl mx-auto text-lg font-medium leading-relaxed">
+          <p className="text-center text-lumina-text/80 mb-12 max-w-4xl mx-auto text-lg font-medium leading-relaxed">
             Discover our comprehensive range of advanced aesthetic treatments, each tailored to address the unique skincare needs of {prettyName} clients.
           </p>
         </div>
 
         {Object.entries(grouped).map(([cat, list]) => (
-          <div key={cat} className="mb-16">
-            <div className="bg-gradient-to-r from-amber-200 to-yellow-200 rounded-2xl p-8 mb-8">
-              <h3 className="text-2xl md:text-3xl font-black mb-2 text-amber-900 text-center">{cat}</h3>
-              <p className="text-center text-amber-800 font-medium">Premium treatments designed for your unique needs</p>
+          <div key={cat} className="mb-20 relative z-10">
+            <div className="glass rounded-2xl p-8 mb-8 border border-lumina-primary/20">
+              <h3 className="text-2xl md:text-3xl font-heading font-bold mb-2 text-lumina-text text-center capitalize">{cat}</h3>
+              <p className="text-center text-lumina-text/70 font-medium">Premium treatments designed for your unique needs</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
               {list.map(service => (
@@ -162,40 +167,40 @@ export default async function NeighborhoodServicesPage({ params }: { params: Pro
         ))}
 
         {/* Location and Contact Information */}
-        <div className="mt-20 bg-gradient-to-br from-amber-200 via-yellow-100 to-amber-100 rounded-3xl p-12 text-center shadow-xl">
-          <h3 className="text-3xl md:text-4xl font-black mb-6 text-amber-900">
+        <div className="mt-20 glass-strong rounded-3xl p-12 text-center shadow-xl border border-lumina-primary/20 relative z-10">
+          <h3 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-lumina-text">
             Conveniently Located for {prettyName} Residents
           </h3>
-          <p className="text-amber-800 mb-10 max-w-3xl mx-auto text-lg font-medium leading-relaxed">
+          <p className="text-lumina-text/80 mb-10 max-w-3xl mx-auto text-lg font-medium leading-relaxed">
             Our state-of-the-art facility is easily accessible from {prettyName}, providing you with premium aesthetic services in a comfortable, professional environment.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="text-center bg-white/50 rounded-2xl p-6 backdrop-blur-sm">
-              <div className="w-16 h-16 bg-amber-800 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                <svg className="w-8 h-8 text-amber-50" fill="currentColor" viewBox="0 0 20 20">
+            <div className="text-center bg-lumina-bg/50 rounded-2xl p-6 backdrop-blur-sm border border-lumina-primary/10">
+              <div className="w-16 h-16 bg-lumina-primary rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg text-lumina-bg">
+                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"></path>
                 </svg>
               </div>
-              <h4 className="font-black text-amber-900 mb-2 text-lg">Our Location</h4>
-              <p className="text-amber-800 font-medium">709 W Littleton Blvd Suite 105<br />Littleton, CO 80120</p>
+              <h4 className="font-heading font-bold text-lumina-text mb-2 text-lg">Our Location</h4>
+              <p className="text-lumina-text/80 font-medium">709 W Littleton Blvd Suite 105<br />Littleton, CO 80120</p>
             </div>
-            <div className="text-center bg-white/50 rounded-2xl p-6 backdrop-blur-sm">
-              <div className="w-16 h-16 bg-yellow-700 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                <svg className="w-8 h-8 text-yellow-50" fill="currentColor" viewBox="0 0 20 20">
+            <div className="text-center bg-lumina-bg/50 rounded-2xl p-6 backdrop-blur-sm border border-lumina-primary/10">
+              <div className="w-16 h-16 bg-lumina-text rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg text-lumina-bg">
+                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
                 </svg>
               </div>
-              <h4 className="font-black text-amber-900 mb-2 text-lg">Contact Us</h4>
-              <p className="text-amber-800 font-medium">(303) 506-3582<br />info@thegloalchemist.com</p>
+              <h4 className="font-heading font-bold text-lumina-text mb-2 text-lg">Contact Us</h4>
+              <p className="text-lumina-text/80 font-medium">(303) 506-3582<br />info@thegloalchemist.com</p>
             </div>
-            <div className="text-center bg-white/50 rounded-2xl p-6 backdrop-blur-sm">
-              <div className="w-16 h-16 bg-amber-700 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                <svg className="w-8 h-8 text-amber-50" fill="currentColor" viewBox="0 0 20 20">
+            <div className="text-center bg-lumina-bg/50 rounded-2xl p-6 backdrop-blur-sm border border-lumina-primary/10">
+              <div className="w-16 h-16 bg-lumina-primary rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg text-lumina-bg">
+                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"></path>
                 </svg>
               </div>
-              <h4 className="font-black text-amber-900 mb-2 text-lg">Hours</h4>
-              <p className="text-amber-800 font-medium">Tuesday - Saturday<br />9:30 AM - 5:00 PM</p>
+              <h4 className="font-heading font-bold text-lumina-text mb-2 text-lg">Hours</h4>
+              <p className="text-lumina-text/80 font-medium">Tuesday - Saturday<br />9:30 AM - 5:00 PM</p>
             </div>
           </div>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
@@ -203,7 +208,7 @@ export default async function NeighborhoodServicesPage({ params }: { params: Pro
               href="https://thegloalchemist.myaestheticrecord.com/online-booking"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 bg-amber-800 text-amber-50 font-black text-lg rounded-full hover:bg-amber-900 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="inline-flex items-center justify-center px-8 py-4 bg-lumina-primary text-lumina-bg font-heading font-bold text-lg rounded-full hover:bg-lumina-text hover:text-lumina-bg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 border border-lumina-primary"
             >
               Schedule Online
             </a>
@@ -211,7 +216,7 @@ export default async function NeighborhoodServicesPage({ params }: { params: Pro
               href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent('709 W Littleton Blvd Suite 105, Littleton, CO 80120')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 bg-yellow-700 text-yellow-50 font-black text-lg rounded-full hover:bg-yellow-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="inline-flex items-center justify-center px-8 py-4 bg-transparent text-lumina-text font-heading font-bold text-lg rounded-full hover:bg-lumina-primary hover:text-lumina-bg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 border-2 border-lumina-text hover:border-lumina-primary"
             >
               <svg className="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
