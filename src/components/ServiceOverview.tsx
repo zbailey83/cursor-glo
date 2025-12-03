@@ -56,20 +56,21 @@ const serviceImages: Record<string, string> = {
 const ServiceOverview = () => {
   const grouped = groupByCategory(services);
   return (
-    <section className="w-full py-20 bg-gradient-to-br from-amber-50 via-yellow-50 to-amber-100 font-inter" id="services">
-      <div className="max-w-6xl mx-auto px-4">
+    <section className="w-full py-20 bg-lumina-bg font-body relative" id="services">
+      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-overlay"></div>
+      <div className="max-w-6xl mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black mb-6 text-amber-900">Our Services</h2>
-          <div className="w-32 h-2 bg-gradient-to-r from-amber-600 to-amber-800 mx-auto mb-8 rounded-full"></div>
-          <p className="text-amber-800 text-xl max-w-3xl mx-auto font-medium leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-lumina-text">Our Services</h2>
+          <div className="w-32 h-2 bg-lumina-primary mx-auto mb-8 rounded-full"></div>
+          <p className="text-lumina-text/80 text-xl max-w-3xl mx-auto font-medium leading-relaxed">
             Discover our comprehensive range of advanced aesthetic treatments designed to help you achieve your skin goals.
           </p>
         </div>
         {Object.entries(grouped).map(([cat, list]) => (
           <div key={cat} className="mb-16">
-            <div className="bg-gradient-to-r from-amber-200 to-yellow-200 rounded-2xl p-8 mb-8">
-              <h3 className="text-2xl md:text-3xl font-black text-amber-900 text-center">{cat}</h3>
-              <p className="text-center text-amber-800 font-medium mt-2">Premium treatments designed for your unique needs</p>
+            <div className="glass rounded-2xl p-8 mb-8 border border-lumina-primary/20">
+              <h3 className="text-2xl md:text-3xl font-heading font-bold text-lumina-text text-center capitalize">{cat.replace(/-/g, ' ')}</h3>
+              <p className="text-center text-lumina-text/70 font-medium mt-2">Premium treatments designed for your unique needs</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {list.map(service => {
@@ -94,4 +95,4 @@ const ServiceOverview = () => {
   );
 };
 
-export default ServiceOverview; 
+export default ServiceOverview;

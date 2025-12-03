@@ -1,9 +1,32 @@
-title: 'Skin Care Clinic in Littleton | The GLO Alchemist Skin & Laser Lab',
+import './globals.css';
+import type { Metadata } from 'next';
+import { Syncopate, Space_Grotesk } from "next/font/google";
+import { Suspense } from 'react';
+
+const syncopate = Syncopate({
+  subsets: ['latin'],
+  variable: '--font-syncopate',
+  weight: ['400', '700'],
+  display: 'swap',
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-space-grotesk',
+  weight: ['300', '400', '500', '600', '700'],
+  display: 'swap',
+});
+
+export const metadata: Metadata = {
+  title: 'Skin Care Clinic in Littleton | The GLO Alchemist Skin & Laser Lab',
   description: 'Transform your skin with advanced laser treatments, professional facials, and medical-grade aesthetics at The GLO Alchemist in Littleton, CO. Licensed professionals, personalized treatment plans.',
+  openGraph: {
+    title: 'Skin Care Clinic in Littleton | The GLO Alchemist Skin & Laser Lab',
+    description: 'Transform your skin with advanced laser treatments, professional facials, and medical-grade aesthetics at The GLO Alchemist in Littleton, CO. Licensed professionals, personalized treatment plans.',
     url: 'https://thegloalchemist.com',
-      siteName: 'The GLO Alchemist',
-        locale: 'en_US',
-          type: 'website',
+    siteName: 'The GLO Alchemist',
+    locale: 'en_US',
+    type: 'website',
   },
 };
 
@@ -13,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${syncopate.variable} ${spaceGrotesk.variable}`}>
       <head>
         {/* Performance optimizations */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -208,7 +231,7 @@ export default function RootLayout({
           ]),
         }} />
       </head>
-      <body className={`min-h-screen bg-gradient-to-br from-amber-50 via-yellow-50 to-amber-100 ${inter.className} font-bold text-amber-900`}>
+      <body className={`min-h-screen bg-lumina-bg text-lumina-text font-body selection:bg-lumina-primary selection:text-lumina-bg`}>
         <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
           {children}
         </Suspense>
