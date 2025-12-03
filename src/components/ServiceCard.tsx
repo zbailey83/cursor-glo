@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 type ServiceCardProps = {
   name: string;
@@ -45,11 +46,14 @@ const ServiceCard = ({ name, description, bullets, href, category, imgSrc }: Ser
           {/* Header with service image or gradient background */}
           <div className={`h-48 ${imgSrc ? 'bg-lumina-subtle' : 'bg-lumina-primary/10'} flex items-center justify-center relative overflow-hidden group-hover:bg-lumina-primary/20 transition-colors duration-300`}>
             {imgSrc ? (
-              <img
-                src={imgSrc}
-                alt={name}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
+              <div className="relative w-full h-full">
+                <Image
+                  src={imgSrc}
+                  alt={name}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
             ) : (
               <div className="text-center relative z-10">
                 <div className="text-5xl mb-3 transform group-hover:scale-110 transition-transform duration-300">{styling.icon}</div>

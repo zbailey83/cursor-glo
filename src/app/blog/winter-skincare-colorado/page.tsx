@@ -37,7 +37,7 @@ export default function WinterSkincarePage() {
                         Winter Skin Care in Colorado: Essential Tips & Treatments
                     </h1>
                     <p className="text-xl text-lumina-text/80 mb-8 max-w-3xl mx-auto font-medium leading-relaxed">
-                        Protect your skin from the unique challenges of Colorado's high-altitude winter climate.
+                        Protect your skin from the unique challenges of Colorado&apos;s high-altitude winter climate.
                     </p>
                     <div className="flex items-center justify-center space-x-4 text-lumina-text/60 font-medium">
                         <span>December 1, 2024</span>
@@ -64,14 +64,14 @@ export default function WinterSkincarePage() {
                 <article className="prose prose-lg max-w-none relative z-10 prose-headings:font-heading prose-headings:text-lumina-text prose-p:text-lumina-text/80 prose-strong:text-lumina-text prose-li:text-lumina-text/80">
                     <div className="glass rounded-3xl p-8 md:p-12 mb-12 border border-lumina-primary/10">
                         <p className="text-lumina-text font-medium text-xl leading-relaxed mb-0">
-                            Winter in Colorado is magical, but it can be brutal on your skin. The combination of low humidity, high altitude, cold temperatures, and indoor heating creates a perfect storm for dehydration and sensitivity. At The GLO Alchemist, we see many clients struggling with "winter skin," but with the right approach, you can maintain a healthy glow all season long.
+                            Winter in Colorado is magical, but it can be brutal on your skin. The combination of low humidity, high altitude, cold temperatures, and indoor heating creates a perfect storm for dehydration and sensitivity. At The GLO Alchemist, we see many clients struggling with &ldquo;winter skin,&rdquo; but with the right approach, you can maintain a healthy glow all season long.
                         </p>
                     </div>
 
                     <h2 className="text-3xl font-heading font-bold text-lumina-primary mb-6">The Colorado Winter Challenge</h2>
 
                     <p className="text-lumina-text/80 font-medium leading-relaxed mb-8">
-                        Why is Colorado winter so tough on skin? It comes down to moisture loss. The air here is already dry, but in winter, humidity levels drop even further. When you move between freezing outdoor air and dry, heated indoor air, your skin's barrier function is compromised, leading to:
+                        Why is Colorado winter so tough on skin? It comes down to moisture loss. The air here is already dry, but in winter, humidity levels drop even further. When you move between freezing outdoor air and dry, heated indoor air, your skin&apos;s barrier function is compromised, leading to:
                     </p>
 
                     <ul className="list-none space-y-4 ml-0 mb-8">
@@ -131,10 +131,10 @@ export default function WinterSkincarePage() {
                             </li>
                             <li className="pl-2">
                                 <strong className="text-lumina-text text-lg block mb-2">Layer Your Hydration</strong>
-                                Don't just rely on one heavy cream. Apply a hydrating serum (like Hyaluronic Acid) first, then seal it in with a rich moisturizer.
+                                Don&apos;t just rely on one heavy cream. Apply a hydrating serum (like Hyaluronic Acid) first, then seal it in with a rich moisturizer.
                             </li>
                             <li className="pl-2">
-                                <strong className="text-lumina-text text-lg block mb-2">Don't Skip SPF!</strong>
+                                <strong className="text-lumina-text text-lg block mb-2">Don&apos;t Skip SPF!</strong>
                                 Snow reflects up to 80% of UV rays, nearly doubling your exposure. Sunscreen is non-negotiable in Colorado, even in January.
                             </li>
                             <li className="pl-2">
@@ -147,13 +147,13 @@ export default function WinterSkincarePage() {
                     <h2 className="text-3xl font-heading font-bold text-lumina-primary mb-6">When to See a Professional</h2>
 
                     <p className="text-lumina-text/80 font-medium leading-relaxed mb-8">
-                        If your skin feels tight, itchy, or painful despite your best efforts at home, it's time to come in. These are signs of a compromised moisture barrier that needs professional repair. We can assess your skin and recommend a recovery plan to get you back to glowing.
+                        If your skin feels tight, itchy, or painful despite your best efforts at home, it&apos;s time to come in. These are signs of a compromised moisture barrier that needs professional repair. We can assess your skin and recommend a recovery plan to get you back to glowing.
                     </p>
 
                     <div className="glass-strong rounded-3xl p-10 mb-12 text-center border border-lumina-primary/20">
                         <h3 className="text-2xl font-heading font-bold text-lumina-text mb-4">Give Your Winter Skin Some Love</h3>
                         <p className="text-lumina-text/80 font-medium mb-8 max-w-2xl mx-auto">
-                            Don't let winter dull your glow. Book a hydrating treatment today and feel the difference professional care makes.
+                            Don&apos;t let winter dull your glow. Book a hydrating treatment today and feel the difference professional care makes.
                         </p>
                         <a
                             href="https://thegloalchemist.myaestheticrecord.com/online-booking"

@@ -95,7 +95,7 @@ export default function ChemicalPeelsVsMicroneedlingPage() {
           <h2 className="text-3xl font-heading font-bold text-lumina-primary mb-6">The Science of Microneedling</h2>
 
           <p className="text-lumina-text/80 font-medium leading-relaxed mb-8">
-            Microneedling, also known as collagen induction therapy, uses tiny needles to create controlled micro-injuries in the skin. This triggers your body's natural healing response, stimulating collagen and elastin production for firmer, smoother skin.
+            Microneedling, also known as collagen induction therapy, uses tiny needles to create controlled micro-injuries in the skin. This triggers your body&apos;s natural healing response, stimulating collagen and elastin production for firmer, smoother skin.
           </p>
 
           <h3 className="text-2xl font-heading font-bold text-lumina-text mb-6">How Microneedling Works</h3>
@@ -198,7 +198,7 @@ export default function ChemicalPeelsVsMicroneedlingPage() {
           <h2 className="text-3xl font-heading font-bold text-lumina-primary mb-6">The GLO Alchemist Difference</h2>
 
           <p className="text-lumina-text/80 font-medium leading-relaxed mb-8">
-            At The GLO Alchemist, we don't believe in one-size-fits-all solutions. During your consultation, we'll assess your skin type, concerns, lifestyle, and goals to recommend the perfect treatment plan. Many clients benefit from combining both treatments for comprehensive skin rejuvenation.
+            At The GLO Alchemist, we don&apos;t believe in one-size-fits-all solutions. During your consultation, we&apos;ll assess your skin type, concerns, lifestyle, and goals to recommend the perfect treatment plan. Many clients benefit from combining both treatments for comprehensive skin rejuvenation.
           </p>
 
           <div className="glass-strong rounded-3xl p-10 mb-12 text-center border border-lumina-primary/20">
@@ -228,7 +228,7 @@ export default function ChemicalPeelsVsMicroneedlingPage() {
                   Winter Skin Care in Colorado
                 </h4>
                 <p className="text-lumina-text/80 font-medium">
-                  Protect your skin from Colorado's harsh winter conditions with professional treatments.
+                  Protect your skin from Colorado&apos;s harsh winter conditions with professional treatments.
                 </p>
               </div>
             </Link>

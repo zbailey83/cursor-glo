@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 
 interface Review {
   id: string;
@@ -25,7 +25,7 @@ const GoogleReviews = () => {
   const [error] = useState<string | null>(null);
 
   // Mock data for demonstration - replace with actual Google Places API call
-  const mockReviews: Review[] = [
+  const mockReviews: Review[] = useMemo(() => [
     {
       id: '1',
       author_name: 'Sarah M.',
@@ -66,12 +66,12 @@ const GoogleReviews = () => {
       text: 'Professional, clean, and results-driven. The dermaplaning service was fantastic and my makeup goes on so much smoother now. Highly recommend The GLO Alchemist!',
       time: Date.now() - 5270400000 // 2 months ago
     }
-  ];
+  ], []);
 
-  const mockBusinessRating: BusinessRating = {
+  const mockBusinessRating: BusinessRating = useMemo(() => ({
     rating: 4.9,
     user_ratings_total: 127
-  };
+  }), []);
 
   useEffect(() => {
     // Simulate API call delay
