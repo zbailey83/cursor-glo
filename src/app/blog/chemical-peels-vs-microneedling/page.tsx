@@ -22,75 +22,86 @@ export const metadata: Metadata = {
 
 export default function ChemicalPeelsVsMicroneedlingPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-amber-50 to-yellow-50 font-inter">
+    <div className="min-h-screen flex flex-col bg-lumina-bg font-body text-lumina-text">
       <Header />
-      
-      <main className="flex-1 max-w-4xl mx-auto py-12 px-4">
+
+      <main className="flex-1 max-w-4xl mx-auto py-20 px-4 relative">
+        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-overlay pointer-events-none"></div>
+
         {/* Hero Section */}
-        <div className="text-center mb-12">
-          <div className="inline-block bg-amber-200 text-amber-900 px-4 py-2 rounded-full text-sm font-black mb-4">
+        <div className="text-center mb-16 relative z-10">
+          <div className="inline-block bg-lumina-primary/10 text-lumina-primary px-4 py-2 rounded-full text-sm font-bold mb-6 font-heading tracking-wide border border-lumina-primary/20">
             Treatment Comparison
           </div>
-          <h1 className="text-4xl md:text-5xl font-black mb-6 text-amber-900 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-heading font-bold mb-8 text-lumina-text leading-tight">
             Chemical Peels vs. Microneedling: Which Treatment is Right for You?
           </h1>
-          <p className="text-xl text-amber-800 mb-8 max-w-3xl mx-auto font-medium leading-relaxed">
+          <p className="text-xl text-lumina-text/80 mb-8 max-w-3xl mx-auto font-medium leading-relaxed">
             Compare two popular skin rejuvenation treatments and find out which one addresses your specific skin concerns.
           </p>
-          <div className="flex items-center justify-center space-x-4 text-amber-700 font-medium">
+          <div className="flex items-center justify-center space-x-4 text-lumina-text/60 font-medium">
             <span>December 9, 2024</span>
-            <span>•</span>
+            <span className="text-lumina-primary">•</span>
             <span>7 min read</span>
           </div>
         </div>
 
         {/* Featured Image */}
-        <div className="mb-12">
-          <div className="relative w-full h-64 md:h-96 rounded-3xl overflow-hidden shadow-xl">
+        <div className="mb-16 relative z-10">
+          <div className="relative w-full h-64 md:h-96 rounded-3xl overflow-hidden shadow-2xl border border-lumina-primary/20">
             <Image
               src="/blog-imgs/blog-crystals-candle.jpg"
               alt="Spa treatment comparison - crystals and candles representing holistic skincare approach"
               fill
-              className="object-cover"
+              className="object-cover hover:scale-105 transition-transform duration-700"
               priority
             />
           </div>
         </div>
 
         {/* Article Content */}
-        <article className="prose prose-lg max-w-none">
-          <div className="bg-gradient-to-br from-amber-100 via-yellow-50 to-amber-50 rounded-3xl p-8 mb-8">
-            <p className="text-amber-800 font-medium text-lg leading-relaxed mb-0">
+        <article className="prose prose-lg max-w-none relative z-10 prose-headings:font-heading prose-headings:text-lumina-text prose-p:text-lumina-text/80 prose-strong:text-lumina-text prose-li:text-lumina-text/80">
+          <div className="glass rounded-3xl p-8 md:p-12 mb-12 border border-lumina-primary/10">
+            <p className="text-lumina-text font-medium text-xl leading-relaxed mb-0">
               When it comes to skin rejuvenation, two treatments consistently top the list of client favorites: chemical peels and microneedling. Both offer remarkable results, but they work in fundamentally different ways. At The GLO Alchemist, we help you choose the perfect treatment based on your unique skin concerns and goals.
             </p>
           </div>
 
-          <h2 className="text-3xl font-black text-amber-900 mb-6">Understanding Chemical Peels</h2>
-          
-          <p className="text-amber-800 font-medium leading-relaxed mb-6">
+          <h2 className="text-3xl font-heading font-bold text-lumina-primary mb-6">Understanding Chemical Peels</h2>
+
+          <p className="text-lumina-text/80 font-medium leading-relaxed mb-8">
             Chemical peels use carefully formulated acids to remove damaged layers of skin, revealing fresh, healthy skin underneath. Think of it as a controlled exfoliation process that goes deeper than any at-home treatment could achieve.
           </p>
 
-          <h3 className="text-2xl font-black text-amber-900 mb-4">Types of Chemical Peels</h3>
-          
-          <div className="bg-amber-50 rounded-2xl p-6 mb-6">
-            <ul className="space-y-3 text-amber-800 font-medium">
-              <li><strong className="text-amber-900">Light Peels:</strong> Perfect for mild sun damage and dullness</li>
-              <li><strong className="text-amber-900">Medium Peels:</strong> Target deeper wrinkles and pigmentation</li>
-              <li><strong className="text-amber-900">Deep Peels:</strong> Address severe sun damage and deep scarring</li>
+          <h3 className="text-2xl font-heading font-bold text-lumina-text mb-6">Types of Chemical Peels</h3>
+
+          <div className="glass rounded-2xl p-8 mb-12 border border-lumina-primary/10">
+            <ul className="space-y-4 text-lumina-text/80 font-medium list-none ml-0">
+              <li className="flex items-start">
+                <span className="text-lumina-primary mr-3 mt-1 text-lg">•</span>
+                <span><strong className="text-lumina-text">Light Peels:</strong> Perfect for mild sun damage and dullness</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-lumina-primary mr-3 mt-1 text-lg">•</span>
+                <span><strong className="text-lumina-text">Medium Peels:</strong> Target deeper wrinkles and pigmentation</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-lumina-primary mr-3 mt-1 text-lg">•</span>
+                <span><strong className="text-lumina-text">Deep Peels:</strong> Address severe sun damage and deep scarring</span>
+              </li>
             </ul>
           </div>
 
-          <h2 className="text-3xl font-black text-amber-900 mb-6">The Science of Microneedling</h2>
-          
-          <p className="text-amber-800 font-medium leading-relaxed mb-6">
+          <h2 className="text-3xl font-heading font-bold text-lumina-primary mb-6">The Science of Microneedling</h2>
+
+          <p className="text-lumina-text/80 font-medium leading-relaxed mb-8">
             Microneedling, also known as collagen induction therapy, uses tiny needles to create controlled micro-injuries in the skin. This triggers your body's natural healing response, stimulating collagen and elastin production for firmer, smoother skin.
           </p>
 
-          <h3 className="text-2xl font-black text-amber-900 mb-4">How Microneedling Works</h3>
-          
-          <div className="bg-yellow-50 rounded-2xl p-6 mb-6">
-            <ol className="space-y-3 text-amber-800 font-medium list-decimal list-inside">
+          <h3 className="text-2xl font-heading font-bold text-lumina-text mb-6">How Microneedling Works</h3>
+
+          <div className="glass rounded-2xl p-8 mb-12 border border-lumina-primary/10">
+            <ol className="space-y-4 text-lumina-text/80 font-medium list-decimal list-inside marker:text-lumina-primary marker:font-bold">
               <li>Micro-channels are created in the skin</li>
               <li>Natural healing response is triggered</li>
               <li>Collagen and elastin production increases</li>
@@ -98,72 +109,108 @@ export default function ChemicalPeelsVsMicroneedlingPage() {
             </ol>
           </div>
 
-          <h2 className="text-3xl font-black text-amber-900 mb-6">Side-by-Side Comparison</h2>
-          
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <div className="bg-gradient-to-br from-amber-100 to-yellow-100 rounded-3xl p-6">
-              <h4 className="text-xl font-black text-amber-900 mb-4">Chemical Peels</h4>
-              <div className="space-y-3 text-amber-800 font-medium">
-                <p><strong>Best for:</strong> Pigmentation, sun damage, fine lines</p>
-                <p><strong>Downtime:</strong> 3-7 days depending on depth</p>
-                <p><strong>Results:</strong> Immediate improvement, continued benefits</p>
-                <p><strong>Frequency:</strong> Every 4-6 weeks</p>
+          <h2 className="text-3xl font-heading font-bold text-lumina-primary mb-8">Side-by-Side Comparison</h2>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="glass rounded-3xl p-8 border border-lumina-primary/20 hover:border-lumina-primary/40 transition-colors">
+              <h4 className="text-xl font-heading font-bold text-lumina-text mb-6 flex items-center">
+                <span className="w-3 h-3 bg-lumina-primary rounded-full mr-3"></span>
+                Chemical Peels
+              </h4>
+              <div className="space-y-4 text-lumina-text/80 font-medium">
+                <p><strong className="text-lumina-text">Best for:</strong> Pigmentation, sun damage, fine lines</p>
+                <p><strong className="text-lumina-text">Downtime:</strong> 3-7 days depending on depth</p>
+                <p><strong className="text-lumina-text">Results:</strong> Immediate improvement, continued benefits</p>
+                <p><strong className="text-lumina-text">Frequency:</strong> Every 4-6 weeks</p>
               </div>
             </div>
-            
-            <div className="bg-gradient-to-br from-yellow-100 to-amber-100 rounded-3xl p-6">
-              <h4 className="text-xl font-black text-amber-900 mb-4">Microneedling</h4>
-              <div className="space-y-3 text-amber-800 font-medium">
-                <p><strong>Best for:</strong> Texture, scars, pore size, firmness</p>
-                <p><strong>Downtime:</strong> 1-3 days of mild redness</p>
-                <p><strong>Results:</strong> Gradual improvement over months</p>
-                <p><strong>Frequency:</strong> Every 4-6 weeks for series</p>
+
+            <div className="glass rounded-3xl p-8 border border-lumina-primary/20 hover:border-lumina-primary/40 transition-colors">
+              <h4 className="text-xl font-heading font-bold text-lumina-text mb-6 flex items-center">
+                <span className="w-3 h-3 bg-lumina-primary rounded-full mr-3"></span>
+                Microneedling
+              </h4>
+              <div className="space-y-4 text-lumina-text/80 font-medium">
+                <p><strong className="text-lumina-text">Best for:</strong> Texture, scars, pore size, firmness</p>
+                <p><strong className="text-lumina-text">Downtime:</strong> 1-3 days of mild redness</p>
+                <p><strong className="text-lumina-text">Results:</strong> Gradual improvement over months</p>
+                <p><strong className="text-lumina-text">Frequency:</strong> Every 4-6 weeks for series</p>
               </div>
             </div>
           </div>
 
-          <h2 className="text-3xl font-black text-amber-900 mb-6">Which Treatment is Right for You?</h2>
-          
-          <div className="bg-gradient-to-br from-amber-200 via-yellow-100 to-amber-100 rounded-3xl p-8 mb-8">
-            <h3 className="text-2xl font-black text-amber-900 mb-4">Choose Chemical Peels If:</h3>
-            <ul className="space-y-2 text-amber-800 font-medium mb-6">
-              <li>• You have sun spots or melasma</li>
-              <li>• Fine lines are your primary concern</li>
-              <li>• You want immediate visible results</li>
-              <li>• You can commit to proper aftercare</li>
-            </ul>
-            
-            <h3 className="text-2xl font-black text-amber-900 mb-4">Choose Microneedling If:</h3>
-            <ul className="space-y-2 text-amber-800 font-medium">
-              <li>• You have acne scars or large pores</li>
-              <li>• Skin firmness is a priority</li>
-              <li>• You prefer minimal downtime</li>
-              <li>• You want to boost collagen production</li>
-            </ul>
+          <h2 className="text-3xl font-heading font-bold text-lumina-primary mb-8">Which Treatment is Right for You?</h2>
+
+          <div className="glass-strong rounded-3xl p-10 mb-12 border border-lumina-primary/20">
+            <div className="grid md:grid-cols-2 gap-10">
+              <div>
+                <h3 className="text-2xl font-heading font-bold text-lumina-text mb-6">Choose Chemical Peels If:</h3>
+                <ul className="space-y-3 text-lumina-text/80 font-medium list-none ml-0">
+                  <li className="flex items-start">
+                    <span className="text-lumina-primary mr-2">•</span>
+                    You have sun spots or melasma
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-lumina-primary mr-2">•</span>
+                    Fine lines are your primary concern
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-lumina-primary mr-2">•</span>
+                    You want immediate visible results
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-lumina-primary mr-2">•</span>
+                    You can commit to proper aftercare
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-heading font-bold text-lumina-text mb-6">Choose Microneedling If:</h3>
+                <ul className="space-y-3 text-lumina-text/80 font-medium list-none ml-0">
+                  <li className="flex items-start">
+                    <span className="text-lumina-primary mr-2">•</span>
+                    You have acne scars or large pores
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-lumina-primary mr-2">•</span>
+                    Skin firmness is a priority
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-lumina-primary mr-2">•</span>
+                    You prefer minimal downtime
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-lumina-primary mr-2">•</span>
+                    You want to boost collagen production
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
 
-          <h2 className="text-3xl font-black text-amber-900 mb-6">Colorado-Specific Considerations</h2>
-          
-          <p className="text-amber-800 font-medium leading-relaxed mb-6">
+          <h2 className="text-3xl font-heading font-bold text-lumina-primary mb-6">Colorado-Specific Considerations</h2>
+
+          <p className="text-lumina-text/80 font-medium leading-relaxed mb-8">
             Living in Colorado presents unique skincare challenges. Our high altitude and intense UV exposure make both treatments excellent choices, but timing matters. We typically recommend chemical peels during fall and winter months when sun exposure is naturally reduced.
           </p>
 
-          <h2 className="text-3xl font-black text-amber-900 mb-6">The GLO Alchemist Difference</h2>
-          
-          <p className="text-amber-800 font-medium leading-relaxed mb-6">
+          <h2 className="text-3xl font-heading font-bold text-lumina-primary mb-6">The GLO Alchemist Difference</h2>
+
+          <p className="text-lumina-text/80 font-medium leading-relaxed mb-8">
             At The GLO Alchemist, we don't believe in one-size-fits-all solutions. During your consultation, we'll assess your skin type, concerns, lifestyle, and goals to recommend the perfect treatment plan. Many clients benefit from combining both treatments for comprehensive skin rejuvenation.
           </p>
 
-          <div className="bg-gradient-to-br from-amber-100 via-yellow-50 to-amber-50 rounded-3xl p-8 mb-8 text-center">
-            <h3 className="text-2xl font-black text-amber-900 mb-4">Ready to Transform Your Skin?</h3>
-            <p className="text-amber-800 font-medium mb-6">
+          <div className="glass-strong rounded-3xl p-10 mb-12 text-center border border-lumina-primary/20">
+            <h3 className="text-2xl font-heading font-bold text-lumina-text mb-4">Ready to Transform Your Skin?</h3>
+            <p className="text-lumina-text/80 font-medium mb-8 max-w-2xl mx-auto">
               Schedule a consultation to discover which treatment will help you achieve your skin goals.
             </p>
             <a
               href="https://thegloalchemist.myaestheticrecord.com/online-booking"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 bg-amber-800 text-amber-50 font-black text-lg rounded-full hover:bg-amber-900 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="inline-flex items-center justify-center px-8 py-4 bg-lumina-primary text-lumina-bg font-heading font-bold text-lg rounded-full hover:bg-lumina-text hover:text-lumina-bg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 border border-lumina-primary"
             >
               Book Your Consultation
             </a>
@@ -171,27 +218,27 @@ export default function ChemicalPeelsVsMicroneedlingPage() {
         </article>
 
         {/* Related Articles */}
-        <div className="mt-16 pt-8 border-t border-amber-200">
-          <h3 className="text-2xl font-black text-amber-900 mb-8 text-center">Related Articles</h3>
+        <div className="mt-16 pt-8 border-t border-lumina-primary/20 relative z-10">
+          <h3 className="text-2xl font-heading font-bold text-lumina-text mb-8 text-center">Related Articles</h3>
           <div className="grid md:grid-cols-2 gap-8">
             <Link href="/blog/winter-skincare-colorado" className="group">
-              <div className="bg-gradient-to-br from-amber-100 to-yellow-100 rounded-3xl p-6 hover:shadow-xl transition-all duration-300 group-hover:scale-105">
-                <div className="text-sm text-amber-700 font-black mb-2 uppercase tracking-wide">Seasonal Care</div>
-                <h4 className="text-xl font-black text-amber-900 mb-3 group-hover:text-amber-800 transition-colors">
+              <div className="glass rounded-3xl p-8 hover:shadow-xl transition-all duration-300 group-hover:scale-105 border border-lumina-primary/10 hover:border-lumina-primary/30">
+                <div className="text-sm text-lumina-primary font-bold mb-3 uppercase tracking-wide font-heading">Seasonal Care</div>
+                <h4 className="text-xl font-heading font-bold text-lumina-text mb-3 group-hover:text-lumina-primary transition-colors">
                   Winter Skin Care in Colorado
                 </h4>
-                <p className="text-amber-800 font-medium">
+                <p className="text-lumina-text/80 font-medium">
                   Protect your skin from Colorado's harsh winter conditions with professional treatments.
                 </p>
               </div>
             </Link>
-            
-            <div className="bg-gradient-to-br from-yellow-100 to-amber-100 rounded-3xl p-6">
-              <div className="text-sm text-amber-700 font-black mb-2 uppercase tracking-wide">Coming Soon</div>
-              <h4 className="text-xl font-black text-amber-900 mb-3">
+
+            <div className="glass rounded-3xl p-8 border border-lumina-primary/10 opacity-75">
+              <div className="text-sm text-lumina-primary font-bold mb-3 uppercase tracking-wide font-heading">Coming Soon</div>
+              <h4 className="text-xl font-heading font-bold text-lumina-text mb-3">
                 Post-Treatment Care Guide
               </h4>
-              <p className="text-amber-800 font-medium">
+              <p className="text-lumina-text/80 font-medium">
                 Essential aftercare tips to maximize your treatment results.
               </p>
             </div>
@@ -200,7 +247,7 @@ export default function ChemicalPeelsVsMicroneedlingPage() {
       </main>
 
       <Footer />
-      
+
       {/* Schema Markup */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{
         __html: JSON.stringify({

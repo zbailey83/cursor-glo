@@ -201,139 +201,138 @@ export default async function NeighborhoodPage({ params }: { params: Promise<{ s
   const serviceName = service?.name || 'Professional Service';
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col bg-lumina-bg font-body text-lumina-text">
       <Header />
-      <main className="flex-1 max-w-3xl mx-auto py-12 px-4">
+      <main className="flex-1 max-w-4xl mx-auto py-20 px-4 relative">
+        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-overlay pointer-events-none"></div>
+
         {/* Breadcrumbs */}
-        <nav className="mb-6 text-sm text-gray-600">
-          <Link href="/" className="hover:text-pink-600">Home</Link>
+        <nav className="mb-8 text-sm text-lumina-text/60 relative z-10 font-medium">
+          <Link href="/" className="hover:text-lumina-primary transition-colors">Home</Link>
           <span className="mx-2">›</span>
-          <Link href="/services" className="hover:text-pink-600">Services</Link>
+          <Link href="/services" className="hover:text-lumina-primary transition-colors">Services</Link>
           <span className="mx-2">›</span>
-          <Link href={`/neighborhood/${neighborhoodSlug}`} className="hover:text-pink-600">{neighborhood}</Link>
+          <Link href={`/neighborhood/${neighborhoodSlug}`} className="hover:text-lumina-primary transition-colors">{neighborhood}</Link>
           <span className="mx-2">›</span>
-          <span className="text-gray-900 font-medium">{serviceName}</span>
+          <span className="text-lumina-text font-bold">{serviceName}</span>
         </nav>
-        
+
         {/* Page Header */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">{serviceName} in {neighborhood}, CO</h1>
-          <div className="w-24 h-1 bg-gradient-to-r from-pink-400 to-orange-400 mb-6"></div>
+        <div className="glass rounded-3xl p-10 mb-10 border border-lumina-primary/20 relative z-10">
+          <h1 className="text-3xl md:text-5xl font-heading font-bold mb-6 text-lumina-text leading-tight">{serviceName} in {neighborhood}, CO</h1>
+          <div className="w-24 h-1.5 bg-lumina-primary mb-6 rounded-full"></div>
         </div>
-        
+
         {/* Main Service Description Card */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
-          <div className="flex items-center mb-4">
-            <div className="w-3 h-3 bg-gradient-to-r from-pink-400 to-orange-400 rounded-full mr-3"></div>
-            <h2 className="text-2xl font-bold text-gray-900">{serviceName} Services for {neighborhood} Residents</h2>
+        <div className="glass rounded-3xl p-10 mb-10 border border-lumina-primary/20 relative z-10">
+          <div className="flex items-center mb-6">
+            <div className="w-3 h-3 bg-lumina-primary rounded-full mr-3"></div>
+            <h2 className="text-2xl font-heading font-bold text-lumina-text">{serviceName} Services for {neighborhood} Residents</h2>
           </div>
-          <p className="text-gray-700 leading-relaxed">{getServiceDescription(serviceSlug)}</p>
+          <p className="text-lumina-text/80 leading-relaxed font-medium text-lg">{getServiceDescription(serviceSlug)}</p>
         </div>
 
         {/* Why Choose Us Card */}
-        <div className="bg-gradient-to-br from-pink-50 to-orange-50 rounded-2xl shadow-lg p-8 mb-8">
-          <div className="flex items-center mb-4">
-            <div className="w-3 h-3 bg-gradient-to-r from-blue-400 to-pink-400 rounded-full mr-3"></div>
-            <h3 className="text-xl font-semibold text-gray-900">Why {neighborhood} Clients Choose The GLO Alchemist</h3>
+        <div className="glass-strong rounded-3xl p-10 mb-10 border border-lumina-primary/20 relative z-10">
+          <div className="flex items-center mb-6">
+            <div className="w-3 h-3 bg-lumina-primary rounded-full mr-3"></div>
+            <h3 className="text-xl font-heading font-bold text-lumina-text">Why {neighborhood} Clients Choose The GLO Alchemist</h3>
           </div>
-          <p className="text-gray-700 leading-relaxed mb-4">{getLocalConsideration(serviceSlug, neighborhoodSlug)}</p>
-          <p className="text-gray-700 leading-relaxed">Our Littleton clinic is conveniently located and easily accessible for {neighborhood} residents seeking professional {serviceName.toLowerCase()} treatments.</p>
+          <p className="text-lumina-text/80 leading-relaxed mb-4 font-medium">{getLocalConsideration(serviceSlug, neighborhoodSlug)}</p>
+          <p className="text-lumina-text/80 leading-relaxed font-medium">Our Littleton clinic is conveniently located and easily accessible for {neighborhood} residents seeking professional {serviceName.toLowerCase()} treatments.</p>
         </div>
 
         {/* Benefits Card */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
-          <div className="flex items-center mb-4">
-            <div className="w-3 h-3 bg-gradient-to-r from-yellow-400 to-pink-400 rounded-full mr-3"></div>
-            <h3 className="text-xl font-semibold text-gray-900">Benefits of {serviceName}</h3>
+        <div className="glass rounded-3xl p-10 mb-10 border border-lumina-primary/20 relative z-10">
+          <div className="flex items-center mb-6">
+            <div className="w-3 h-3 bg-lumina-primary rounded-full mr-3"></div>
+            <h3 className="text-xl font-heading font-bold text-lumina-text">Benefits of {serviceName}</h3>
           </div>
-          <ul className="space-y-3">
+          <ul className="space-y-4">
             {getBenefits(serviceSlug).map((benefit, index) => (
               <li key={index} className="flex items-start">
-                <span className="text-pink-500 mr-3 mt-1">•</span>
-                <span className="text-gray-700">{benefit}</span>
+                <span className="text-lumina-primary mr-3 mt-1 text-lg">•</span>
+                <span className="text-lumina-text/80 font-medium">{benefit}</span>
               </li>
             ))}
           </ul>
         </div>
 
         {/* What to Expect Card */}
-        <div className="bg-gradient-to-br from-blue-50 to-pink-50 rounded-2xl shadow-lg p-8 mb-8">
-          <div className="flex items-center mb-4">
-            <div className="w-3 h-3 bg-gradient-to-r from-green-400 to-blue-400 rounded-full mr-3"></div>
-            <h3 className="text-xl font-semibold text-gray-900">What to Expect</h3>
+        <div className="glass rounded-3xl p-10 mb-10 border border-lumina-primary/20 relative z-10">
+          <div className="flex items-center mb-6">
+            <div className="w-3 h-3 bg-lumina-primary rounded-full mr-3"></div>
+            <h3 className="text-xl font-heading font-bold text-lumina-text">What to Expect</h3>
           </div>
-          <p className="text-gray-700 leading-relaxed">During your {serviceName.toLowerCase()} treatment, our licensed aestheticians will ensure your comfort and safety while delivering exceptional results. We customize each treatment to your specific skin type and concerns, ensuring optimal outcomes for {neighborhood} residents.</p>
+          <p className="text-lumina-text/80 leading-relaxed font-medium">During your {serviceName.toLowerCase()} treatment, our licensed aestheticians will ensure your comfort and safety while delivering exceptional results. We customize each treatment to your specific skin type and concerns, ensuring optimal outcomes for {neighborhood} residents.</p>
         </div>
 
         {/* Location & Access Card */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
-          <div className="flex items-center mb-4">
-            <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mr-3"></div>
-            <h3 className="text-xl font-semibold text-gray-900">Getting to Our Clinic from {neighborhood}</h3>
+        <div className="glass rounded-3xl p-10 mb-10 border border-lumina-primary/20 relative z-10">
+          <div className="flex items-center mb-6">
+            <div className="w-3 h-3 bg-lumina-primary rounded-full mr-3"></div>
+            <h3 className="text-xl font-heading font-bold text-lumina-text">Getting to Our Clinic from {neighborhood}</h3>
           </div>
-          <p className="text-gray-700 leading-relaxed">Our clinic is conveniently located at 709 W Littleton Blvd Suite 105, with easy access from {neighborhood}. We offer ample parking and a comfortable, professional environment for all your aesthetic needs. Most {neighborhood} residents find us just a short drive away.</p>
+          <p className="text-lumina-text/80 leading-relaxed font-medium">Our clinic is conveniently located at 709 W Littleton Blvd Suite 105, with easy access from {neighborhood}. We offer ample parking and a comfortable, professional environment for all your aesthetic needs. Most {neighborhood} residents find us just a short drive away.</p>
         </div>
 
         {/* About Neighborhood Card */}
-        <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl shadow-lg p-8 mb-8">
-          <div className="flex items-center mb-4">
-            <div className="w-3 h-3 bg-gradient-to-r from-orange-400 to-yellow-400 rounded-full mr-3"></div>
-            <h3 className="text-xl font-semibold text-gray-900">About {neighborhood}</h3>
+        <div className="glass rounded-3xl p-10 mb-10 border border-lumina-primary/20 relative z-10">
+          <div className="flex items-center mb-6">
+            <div className="w-3 h-3 bg-lumina-primary rounded-full mr-3"></div>
+            <h3 className="text-xl font-heading font-bold text-lumina-text">About {neighborhood}</h3>
           </div>
-          <p className="text-gray-700 leading-relaxed">{neighborhood} is a wonderful community in the Denver metro area, and we are proud to serve residents with the highest quality skin care treatments. Our location provides convenient access for {neighborhood} residents seeking professional aesthetic services in a welcoming, state-of-the-art facility.</p>
+          <p className="text-lumina-text/80 leading-relaxed font-medium">{neighborhood} is a wonderful community in the Denver metro area, and we are proud to serve residents with the highest quality skin care treatments. Our location provides convenient access for {neighborhood} residents seeking professional aesthetic services in a welcoming, state-of-the-art facility.</p>
         </div>
 
         {/* FAQ Card */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
-          <div className="flex items-center mb-6">
-            <div className="w-3 h-3 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full mr-3"></div>
-            <h3 className="text-xl font-semibold text-gray-900">Frequently Asked Questions</h3>
+        <div className="glass rounded-3xl p-10 mb-10 border border-lumina-primary/20 relative z-10">
+          <div className="flex items-center mb-8">
+            <div className="w-3 h-3 bg-lumina-primary rounded-full mr-3"></div>
+            <h3 className="text-xl font-heading font-bold text-lumina-text">Frequently Asked Questions</h3>
           </div>
           <div className="space-y-6">
             {getFAQs(serviceSlug).map((faq, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg p-6 border-l-4 border-pink-400">
-                <h4 className="font-semibold text-gray-900 mb-3">{faq.question}</h4>
-                <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+              <div key={index} className="bg-lumina-bg/50 rounded-xl p-6 border-l-4 border-lumina-primary">
+                <h4 className="font-bold text-lumina-text mb-3 font-heading">{faq.question}</h4>
+                <p className="text-lumina-text/80 leading-relaxed font-medium">{faq.answer}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Schedule Consultation Card */}
-        <div className="bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl shadow-lg p-8 mb-8">
-          <div className="flex items-center mb-4">
-            <div className="w-3 h-3 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full mr-3"></div>
-            <h3 className="text-xl font-semibold text-gray-900">Schedule Your {serviceName} Consultation</h3>
+        <div className="glass-strong rounded-3xl p-10 mb-10 border border-lumina-primary/20 relative z-10">
+          <div className="flex items-center mb-6">
+            <div className="w-3 h-3 bg-lumina-primary rounded-full mr-3"></div>
+            <h3 className="text-xl font-heading font-bold text-lumina-text">Schedule Your {serviceName} Consultation</h3>
           </div>
-          <p className="text-gray-700 leading-relaxed">Ready to experience the benefits of professional {serviceName.toLowerCase()}? Contact The GLO Alchemist today to schedule your consultation. We are proud to serve {neighborhood} residents with the highest quality aesthetic treatments and personalized care.</p>
-        </div>
-        
-        <div className="bg-gradient-to-br from-yellow-100 via-white to-yellow-200 rounded-2xl shadow-xl p-6 mb-8">
-          <h2 className="text-xl font-semibold mb-4 text-center text-orange-800">Ready to Book Your {serviceName} Treatment?</h2>
+          <p className="text-lumina-text/80 leading-relaxed font-medium mb-8">Ready to experience the benefits of professional {serviceName.toLowerCase()}? Contact The GLO Alchemist today to schedule your consultation. We are proud to serve {neighborhood} residents with the highest quality aesthetic treatments and personalized care.</p>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="https://thegloalchemist.myaestheticrecord.com/online-booking"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-thermal text-white rounded-full px-8 py-3 text-center"
+              className="inline-flex items-center justify-center px-8 py-4 bg-lumina-primary text-lumina-bg font-heading font-bold rounded-full hover:bg-lumina-text hover:text-lumina-bg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 border border-lumina-primary"
             >
               Book Online Now
             </a>
             <a
               href="tel:3035063582"
-              className="btn-thermal text-white rounded-lg px-8 py-3 text-center"
+              className="inline-flex items-center justify-center px-8 py-4 bg-transparent text-lumina-text font-heading font-bold rounded-full hover:bg-lumina-primary hover:text-lumina-bg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 border-2 border-lumina-text hover:border-lumina-primary"
             >
               Call (303) 506-3582
             </a>
           </div>
-          <p className="text-center text-sm text-gray-600 mt-3">
+          <p className="text-center text-sm text-lumina-text/60 mt-4 font-medium">
             Serving {neighborhood} residents with convenient access and professional care
           </p>
         </div>
-        
+
         {/* Related Services Section */}
-        <div className="bg-gradient-to-br from-yellow-50 via-white to-yellow-100 rounded-2xl shadow-lg p-6 mb-8">
-          <h2 className="text-xl font-semibold mb-4 text-center text-orange-800">Related Services in {neighborhood}</h2>
+        <div className="glass rounded-3xl p-10 mb-10 border border-lumina-primary/20 relative z-10">
+          <h2 className="text-xl font-heading font-bold mb-6 text-center text-lumina-text">Related Services in {neighborhood}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {services
               .filter(s => s.slug !== serviceSlug && s.category === service?.category)
@@ -342,17 +341,17 @@ export default async function NeighborhoodPage({ params }: { params: Promise<{ s
                 <a
                   key={relatedService.slug}
                   href={`/${relatedService.slug}/${neighborhoodSlug}`}
-                  className="block p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 border border-yellow-200"
+                  className="block p-4 bg-lumina-bg/50 rounded-xl shadow-sm hover:shadow-md transition-all duration-200 border border-lumina-primary/10 hover:border-lumina-primary/30"
                 >
-                  <h3 className="font-semibold text-pink-700 mb-2">{relatedService.name}</h3>
-                  <p className="text-sm text-gray-600">Available in {neighborhood}</p>
+                  <h3 className="font-bold text-lumina-text mb-2 font-heading text-sm">{relatedService.name}</h3>
+                  <p className="text-xs text-lumina-text/60 font-medium">Available in {neighborhood}</p>
                 </a>
               ))}
           </div>
-          <div className="text-center mt-4">
+          <div className="text-center mt-6">
             <a
               href={`/neighborhood/${neighborhoodSlug}`}
-              className="text-pink-600 hover:text-pink-800 font-medium text-sm"
+              className="text-lumina-primary hover:text-lumina-text font-bold text-sm transition-colors"
             >
               View All Services in {neighborhood} →
             </a>
@@ -360,26 +359,26 @@ export default async function NeighborhoodPage({ params }: { params: Promise<{ s
         </div>
 
         {/* All Services Reference */}
-        <div className="bg-gradient-to-br from-yellow-50 via-white to-yellow-100 rounded-2xl shadow-lg p-6 mb-8">
-          <h2 className="text-xl font-semibold mb-6 text-center text-orange-800">Complete Service Menu</h2>
+        <div className="glass rounded-3xl p-10 mb-10 border border-lumina-primary/20 relative z-10">
+          <h2 className="text-xl font-heading font-bold mb-8 text-center text-lumina-text">Complete Service Menu</h2>
           {Object.entries(grouped).map(([cat, list]) => (
             <div key={cat} className="mb-8 last:mb-0">
-              <h3 className="text-lg font-bold text-pink-700 mb-4">{cat}</h3>
+              <h3 className="text-lg font-bold text-lumina-primary mb-4 font-heading capitalize">{cat}</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {list.map(s => (
                   <div key={s.slug}>
                     {s.slug === service?.slug ? (
-                      <div className="block p-4 bg-gradient-to-br from-pink-100 to-pink-50 rounded-lg shadow-md border-2 border-pink-300">
-                        <h4 className="font-semibold text-pink-800 mb-2">{s.name}</h4>
-                        <p className="text-sm text-pink-600">Currently Viewing</p>
+                      <div className="block p-4 bg-lumina-primary/10 rounded-xl shadow-sm border border-lumina-primary">
+                        <h4 className="font-bold text-lumina-text mb-2 font-heading text-sm">{s.name}</h4>
+                        <p className="text-xs text-lumina-primary font-bold">Currently Viewing</p>
                       </div>
                     ) : (
                       <a
                         href={`/${s.slug}/${neighborhoodSlug}`}
-                        className="block p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 border border-yellow-200 hover:border-pink-200"
+                        className="block p-4 bg-lumina-bg/50 rounded-xl shadow-sm hover:shadow-md transition-all duration-200 border border-lumina-primary/10 hover:border-lumina-primary/30"
                       >
-                        <h4 className="font-semibold text-pink-700 mb-2">{s.name}</h4>
-                        <p className="text-sm text-gray-600">Available in {neighborhood}</p>
+                        <h4 className="font-bold text-lumina-text mb-2 font-heading text-sm">{s.name}</h4>
+                        <p className="text-xs text-lumina-text/60 font-medium">Available in {neighborhood}</p>
                       </a>
                     )}
                   </div>
@@ -388,7 +387,7 @@ export default async function NeighborhoodPage({ params }: { params: Promise<{ s
             </div>
           ))}
         </div>
-        
+
         {/* Service Schema.org JSON-LD */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -433,7 +432,7 @@ export default async function NeighborhoodPage({ params }: { params: Promise<{ s
             }
           }),
         }} />
-        
+
         {/* FAQ Schema.org JSON-LD */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -450,7 +449,7 @@ export default async function NeighborhoodPage({ params }: { params: Promise<{ s
             }))
           }),
         }} />
-        
+
         {/* Breadcrumb Schema.org JSON-LD */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
