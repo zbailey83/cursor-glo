@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'The Ultimate Guide to Dermaplaning | The GLO Alchemist Blog',
@@ -47,10 +48,12 @@ export default function DermaplaningGuidePage() {
             <span>By The GLO Alchemist Team</span>
           </div>
           <div className="relative w-full h-64 md:h-96 rounded-3xl overflow-hidden shadow-2xl mb-12 border border-lumina-primary/20">
-            <img
+            <Image
               src="/blog-imgs/blog-nature-woman.jpg"
               alt="Woman enjoying natural skincare treatment - representing the natural approach to dermaplaning"
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              fill
+              className="object-cover hover:scale-105 transition-transform duration-700"
+              priority
             />
           </div>
         </header>
