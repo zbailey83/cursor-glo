@@ -65,15 +65,24 @@ const getServiceInfo = (slug: string) => {
 export default function ServicesMainPage() {
   const grouped = groupByCategory(services);
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col bg-lumina-bg font-body text-lumina-text">
       <Header />
-      <main className="flex-1 max-w-5xl mx-auto py-12 px-4">
-        <h1 className="text-3xl font-bold mb-8 text-center">Skin Care Clinic</h1>
-        <p className="text-center text-gray-600 mb-10">Discover our comprehensive range of advanced aesthetic treatments designed to help you achieve your skin goals.</p>
+      <main className="flex-1 max-w-7xl mx-auto py-20 px-4 relative">
+        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-overlay pointer-events-none"></div>
+        <div className="text-center mb-16 relative z-10">
+          <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-lumina-text">Skin Care Clinic</h1>
+          <div className="w-32 h-2 bg-lumina-primary mx-auto mb-8 rounded-full"></div>
+          <p className="text-xl text-lumina-text/80 max-w-3xl mx-auto font-medium leading-relaxed">
+            Discover our comprehensive range of advanced aesthetic treatments designed to help you achieve your skin goals.
+          </p>
+        </div>
+
         {Object.entries(grouped).map(([cat, list]) => (
-          <div key={cat} className="mb-12">
-            <h2 className="text-xl font-semibold mb-6 text-pink-700 text-center">{cat}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div key={cat} className="mb-20 relative z-10">
+            <div className="glass rounded-2xl p-6 mb-10 border border-lumina-primary/20 inline-block w-full">
+              <h2 className="text-2xl md:text-3xl font-heading font-bold text-center capitalize text-lumina-text">{cat}</h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
               {list.map(service => {
                 const serviceInfo = getServiceInfo(service.slug);
                 return (

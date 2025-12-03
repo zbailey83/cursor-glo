@@ -1,4 +1,3 @@
-```
 import React from 'react';
 
 const About = () => (
@@ -8,7 +7,7 @@ const About = () => (
         <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-lumina-text">About The GLO Alchemist</h2>
         <div className="w-32 h-2 bg-lumina-primary mx-auto mb-12 rounded-full"></div>
       </div>
-      
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Content */}
         <div className="space-y-6">
@@ -23,7 +22,7 @@ const About = () => (
                   Let&apos;s get GLOing! At The GLO Alchemist, we are driven by a mission to educate, simplify skincare, provide product knowledge, heal and enhance one&apos;s own natural &ldquo;Glo.&rdquo;
                 </p>
               </div>
-              
+
               <div>
                 <div className="flex items-center mb-4">
                   <div className="w-4 h-4 bg-lumina-primary/70 rounded-full mr-4"></div>
@@ -33,7 +32,7 @@ const About = () => (
                   We specialize in skincare and laser treatments, offering progressive treatments that deliver tangible results. Guided by our values of safety, cleanliness, and empowerment through education.
                 </p>
               </div>
-              
+
               <div>
                 <div className="flex items-center mb-4">
                   <div className="w-4 h-4 bg-lumina-primary/40 rounded-full mr-4"></div>
@@ -46,7 +45,7 @@ const About = () => (
             </div>
           </div>
         </div>
-        
+
         {/* Stats/Features */}
         <div className="space-y-6">
           <div className="grid grid-cols-2 gap-6">
@@ -59,7 +58,7 @@ const About = () => (
               <div className="text-lumina-text font-bold">Years Experience</div>
             </div>
           </div>
-          
+
           <div className="glass rounded-3xl p-10 shadow-xl border border-lumina-primary/20">
             <h4 className="text-2xl font-heading font-bold text-lumina-text mb-6">Why Choose Us?</h4>
             <ul className="space-y-4">
@@ -88,4 +87,3 @@ const About = () => (
 );
 
 export default About;
-```
