@@ -51,7 +51,7 @@ export default function WinterSkincarePage() {
                     <div className="relative w-full h-64 md:h-96 rounded-3xl overflow-hidden shadow-2xl border border-lumina-primary/20">
                         <div className="absolute inset-0 bg-lumina-primary/20 z-10 mix-blend-overlay"></div>
                         <Image
-                            src="/blog-imgs/blog-nature-woman.jpg"
+                            src="https://images.unsplash.com/photo-1549646608-2e06173a5563?auto=format&fit=crop&q=80&w=1200"
                             alt="Woman in winter setting protecting skin"
                             fill
                             className="object-cover hover:scale-105 transition-transform duration-700"

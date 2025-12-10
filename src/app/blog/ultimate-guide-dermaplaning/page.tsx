@@ -49,7 +49,7 @@ export default function DermaplaningGuidePage() {
           </div>
           <div className="relative w-full h-64 md:h-96 rounded-3xl overflow-hidden shadow-2xl mb-12 border border-lumina-primary/20">
             <Image
-              src="/blog-imgs/blog-nature-woman.jpg"
+              src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&q=80&w=1200"
               alt="Woman enjoying natural skincare treatment - representing the natural approach to dermaplaning"
               fill
               className="object-cover hover:scale-105 transition-transform duration-700"

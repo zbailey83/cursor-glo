@@ -2,6 +2,7 @@ export interface ServiceContent {
   name: string;
   slug: string;
   category: string;
+  image?: string;
   description: string;
   benefits: string[];
   process: string[];

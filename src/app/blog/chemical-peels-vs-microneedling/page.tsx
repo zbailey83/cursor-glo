@@ -50,7 +50,7 @@ export default function ChemicalPeelsVsMicroneedlingPage() {
         <div className="mb-16 relative z-10">
           <div className="relative w-full h-64 md:h-96 rounded-3xl overflow-hidden shadow-2xl border border-lumina-primary/20">
             <Image
-              src="/blog-imgs/blog-crystals-candle.jpg"
+              src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=1200"
               alt="Spa treatment comparison - crystals and candles representing holistic skincare approach"
               fill
               className="object-cover hover:scale-105 transition-transform duration-700"

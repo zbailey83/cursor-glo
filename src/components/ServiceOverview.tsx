@@ -44,14 +44,7 @@ const getServiceInfo = (slug: string) => {
   };
 };
 
-const serviceImages: Record<string, string> = {
-  'dermaplaning': '/service-imgs/dermaplaning-ft.png',
-  'chemical-peels': '/service-imgs/chemicalpeel-ft.png',
-  'microneedling': '/service-imgs/microneedling-ft.png',
-  'hydrating-facial': '/service-imgs/hydrating-f.png',
-  'detoxifying-facial': '/service-imgs/detoxifying-f.png',
-  'vitality-facial': '/service-imgs/vitality-f.png',
-};
+
 
 const ServiceOverview = () => {
   const grouped = groupByCategory(services);
@@ -82,7 +75,7 @@ const ServiceOverview = () => {
                     description={serviceInfo.description}
                     bullets={serviceInfo.bullets}
                     href={`/${service.slug}/littleton-co`}
-                    imgSrc={serviceImages[service.slug]}
+                    imgSrc={service.image}
                     category={service.category}
                   />
                 );
